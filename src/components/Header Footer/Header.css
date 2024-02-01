@@ -25,32 +25,56 @@ header {
     font-size: 1.8rem;
 }
 
-.Navbar {
+#navbar-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    list-style: none;
-    margin: 0;
+    margin-right: 1rem;
+}
+
+#navbar-container ul {
+    list-style-type: none;
     padding: 0;
-}
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #collapsible-navbar {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  #toggle-button {
+    /* margin: 0.8rem; */
+    display: none;
+  }
 
-.Navbar li {
-    margin: 0 1rem;
-}
+  #nav-image {
+    width: 1rem;
+  }
 
-li button,
-li a {
-    text-decoration: none;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 0.3rem;
-}
+  #first-half {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-li button:hover,
-li a:hover {
+  .nav-list li button, .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      padding: 0.3rem;
+      margin: 0 1rem;
+
+  }
+
+.nav-list li button:hover,
+.nav-list li a:hover {
     background-color: #999999;
     border-radius: 5px;
 }
@@ -58,7 +82,6 @@ li a:hover {
 #resume-link {
     background-color: #007bff;
     color: #fff;
-    padding: 0.4em 0.8em;
     border-radius: 5px;
     font-weight: bold;
     margin-right: 0.6rem;
@@ -71,15 +94,61 @@ li a:hover {
 @media screen and (max-width: 670px) {
     #header-name {
         display: none;
-        flex-wrap: wrap;
     }
     #header-container {
         justify-content: center;
     }
+    #navbar-container {
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+    #navbar {
+        flex-wrap: wrap;
+        display: none;
+        flex-direction: column;
+    }
+    #first-half {
+        width: 95vw;
+        margin: auto;
+    }
+    #first-half ul li {
+        margin: 0 4vw;
+    }
+    #toggle-button {
+        display: block;
+        margin: 0;
+        /* padding: 0.5rem; */
+        border: none;
+        background: none;
+    }
+    #collapsible-navbar {
+        display: none;
+        flex-direction: column;
+        margin: auto;
+      }
+
+    #collapsible-navbar li {
+        margin: 1.2rem 1.3rem;
+      }
+    
+    #navbar li {
+        margin: 10px 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .Navbar li {
+    #navbar li {
         margin: 0 0.7rem;
+        padding: 0.1rem;
+    }
+    .nav-list li button, .nav-list li a {
+        padding: 0.3rem;
+        margin: 0 0.5rem;
+    }
+    #navbar-container {
+        width: 100vw;
+    }
+    #first-half {
+        margin: 0;
     }
 }
