@@ -6,7 +6,7 @@ const skillsData = [
     { name: 'C++', icon: '/icons/C++.png' },
     { name: 'Python', icon: '/icons/Python.png' },
     { name: 'C', icon: '/icons/C.png' },
-    { name: 'Bootstrap', icon: '/icons/Bootstrap.png' },
+    { name: 'Bootstrap', icon: '/icons/bootstrap.png' },
     { name: 'Node', icon: '/icons/Node.js.png' },
     { name: 'Express', icon: '/icons/expressjs.png' },
     { name: 'SQL', icon: '/icons/sql.png' },

@@ -42,7 +42,7 @@ const Header = () => {
               <li><button onClick={() => scrollToSection('skills')}>Skills</button></li>
             </ul>
             <button id="toggle-button" onClick={toggleNavbar}>
-              <img id='nav-image' src='/icons/navbar.png' alt='navbar'></img>
+              <img id='nav-image' src={process.env.PUBLIC_URL + '/icons/navbar.png'} alt='navbar'></img>
             </button>
           </div>
           <ul className='nav-list' id='collapsible-navbar'>

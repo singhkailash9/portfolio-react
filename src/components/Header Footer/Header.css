@@ -31,7 +31,7 @@ header {
     margin-right: 1rem;
 }
 
-#navbar-container ul {
+#first-half ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -40,7 +40,7 @@ header {
   }
   
   #collapsible-navbar {
-    display: flex;
+    display: none;
     list-style-type: none;
   }
   
@@ -91,6 +91,24 @@ header {
     background-color: #0056b3;
 }
 
+@media screen and (min-width: 671px) {
+    #collapsible-navbar {
+      display: flex;
+      flex-direction: row;
+      margin: inherit;
+      padding: inherit;
+    }
+    
+    #toggle-button {
+      display: none;
+    }
+    
+    .nav-list {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
 @media screen and (max-width: 670px) {
     #header-name {
         display: none;
@@ -112,19 +130,19 @@ header {
         margin: auto;
     }
     #first-half ul li {
-        margin: 0 4vw;
+        margin: 0 3.5vw;
     }
     #toggle-button {
         display: block;
         margin: 0;
-        /* padding: 0.5rem; */
         border: none;
         background: none;
     }
     #collapsible-navbar {
         display: none;
         flex-direction: column;
-        margin: auto;
+        margin: inherit;
+        padding: inherit;
       }
 
     #collapsible-navbar li {
@@ -137,12 +155,15 @@ header {
 }
 
 @media screen and (max-width: 480px) {
+    #navbar-container {
+        width: 90vw;
+    }
     #navbar li {
         margin: 0 0.7rem;
         padding: 0.1rem;
     }
     .nav-list li button, .nav-list li a {
-        padding: 0.3rem;
+        padding: 0.2rem;
         margin: 0 0.5rem;
     }
     #navbar-container {
@@ -150,5 +171,21 @@ header {
     }
     #first-half {
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header {
+        padding: 0.4rem;
+    }
+    #navbar-container {
+        width: 100%;
+    }
+    .nav-list li button, .nav-list li a {
+        padding: 0.1rem;
+        font-size: 0.9em;
+    }
+    .nav-list li a {
+        padding: 0.2rem;
     }
 }
