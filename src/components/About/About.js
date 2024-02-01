@@ -6,7 +6,7 @@ AOS.init();
 function About() {
     return <div className="about-container">
         <video id="about-video" autoPlay muted loop playsInline>
-            <source src="/about-me.mp4" itemType="video/mp4" />
+            <source src={process.env.PUBLIC_URL + "/about-me.mp4"} itemType="video/mp4" />
             Your browser does not support the video tag.
         </video>
         <div id="about-text" data-aos="zoom-in-up">I am a passionate and adaptable fresher in web development, constantly seeking to stay abreast of evolving technologies. With a solid foundation in both front-end and back-end skills, I am eager to tackle new challenges and contribute to innovative web solutions in a collaborative environment.

@@ -10,10 +10,10 @@ const Contact = () => {
         <div className="social-links">
           <a href="https://github.com/singhkailash9" target="_blank" rel="noopener noreferrer">
             GitHub
-            <img src="/icons/github.png" alt="linkedin" className="icon"></img></a>
+            <img src={process.env.PUBLIC_URL + "/icons/github.png"} alt="linkedin" className="icon"></img></a>
           <a href="https://www.linkedin.com/in/kailash-singh-725a10232/" target="_blank" rel="noopener noreferrer">
             LinkedIn
-            <img src="/icons/linkedin.png" alt="github" className="icon"></img></a>
+            <img src={process.env.PUBLIC_URL + "/icons/linkedin.png"} alt="github" className="icon"></img></a>
         </div>
       </div>
       <div className="contact-form">

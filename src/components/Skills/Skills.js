@@ -12,7 +12,7 @@ const Skills = () => {
     <div className="skills" data-aos="flip-up">
       {skillsData.map((skill, index) => (
         <div key={index} className="skill">
-          <img src={skill.icon} alt={skill.name} />
+          <img src={process.env.PUBLIC_URL + skill.icon} alt={skill.name} />
           <p>{skill.name}</p>
         </div>
       ))}

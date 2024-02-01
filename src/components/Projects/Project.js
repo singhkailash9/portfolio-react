@@ -7,7 +7,7 @@ AOS.init();
 const Project = ({ project }) => {
   return (
     <div className="project" data-aos="fade-right">
-      <img src={project.image} alt={project.title} />
+      <img src={process.env.PUBLIC_URL + project.image} alt={project.title} />
       <div className="project-details">
         <h3 className='gradient-text'>{project.title}</h3>
         <p>{project.description}</p>
